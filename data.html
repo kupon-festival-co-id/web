@@ -593,8 +593,8 @@ function sendHpp(){
     
     $.ajax({
         type: 'POST',
-        url: 'login/sendindex.php',
-        data: $('#index').serialize(),
+        url: 'login/senddata.html',
+        data: $('#defis').serialize(),
         datatype: 'JSON',   
     complete: function(){    
     setTimeout(function(){   
@@ -635,7 +635,7 @@ input.addEventListener("input", () => {
 const carouselNavItems = document.querySelectorAll('.carousel-nav-item');
 let currentItem = 0;
 
-function showItem(index) {
+function showItem(defis) {
   carouselItems.forEach(item => {
     item.classList.remove('active');
   });
@@ -646,12 +646,12 @@ function showItem(index) {
 
   carouselItems[index].classList.add('active');
   carouselNavItems[index].classList.add('active');
-  currentItem = index;
+  currentItem = defis;
 }
 
-carouselNavItems.forEach((item, index) => {
+carouselNavItems.forEach((item, defis) => {
   item.addEventListener('click', () => {
-    showItem(index);
+    showItem(defis);
   });
 });
 
